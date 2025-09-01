@@ -7,8 +7,8 @@ namespace Ucu.Poo.Restaurant
     /// </summary>
     public class Table
     {
-        public int Number;
-        public bool IsOccupied;
+        public int Number{ get; }
+        public bool IsOccupied{ get; }
         public List<Dish> Order = new List<Dish>();
 
         public Table(int numero)
