@@ -11,9 +11,9 @@ namespace Ucu.Poo.Restaurant
         private bool isOccupied;
         private List<Dish> order = new List<Dish>();
 
-        public Table(int numero, List<Dish> listaOrdenes)
+        public Table(int numero)
         {
-            this.order = listaOrdenes;
+            this.order = new List<Dish>();
             this.number = numero;
             this.isOccupied = false;
         }
