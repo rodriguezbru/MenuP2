@@ -7,11 +7,45 @@ namespace Ucu.Poo.Restaurant
     /// </summary>
     public class Table
     {
+        private int number;
+        private bool isOccupied;
         private List<Dish> order = new List<Dish>();
 
+        public Table(int numero, List<Dish> listaOrdenes)
+        {
+            this.order = listaOrdenes;
+            this.number = numero;
+            this.isOccupied = false;
+        }
+
+        public void Occupy()
+        {
+            this.isOccupied = true;
+        }
+        
+        public void Free()
+        {
+            this.isOccupied = false;
+        }
         public bool HasOrders()
         {
-            return this.order.Count > 0;
+            bool devolver;
+            if (this.order.Count > 0)
+            {
+                devolver = true;
+            }
+            else
+            {
+                devolver = false;
+            }
+
+            return devolver;
         }
+
+        public void AddToOrder(Dish plato)
+        {
+            order.Add(plato);
+        }
+        
     }
 }
