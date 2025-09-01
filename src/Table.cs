@@ -8,7 +8,7 @@ namespace Ucu.Poo.Restaurant
     public class Table
     {
         public int Number{ get; }
-        public bool IsOccupied{ get; }
+        public bool IsOccupied{ get; set; }
         public List<Dish> Order = new List<Dish>();
 
         public Table(int numero)
