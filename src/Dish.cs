@@ -9,10 +9,10 @@ namespace Ucu.Poo.Restaurant
     /// </summary>
     public class Dish
     {
-        private string Name;
-        private double Price;
-        private bool IsVegetarian;
-    
+        public string Name { get; }
+        public double Price{ get;}
+        public bool IsVegetarian { get;}
+
         public Dish(string nombre, double precio, bool vegetariano)
         {
             this.Name = nombre;
